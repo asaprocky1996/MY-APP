@@ -14,6 +14,7 @@ import { HomeinnerComponent } from './homeinner/homeinner.component';
 import { EmiComponent } from './emi/emi.component';
 import { SimpleinterestComponent } from './simpleinterest/simpleinterest.component';
 import { DegreesComponent } from './degrees/degrees.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 const routes: Routes = [
    {path:'dashboard',component:DashboardComponent,children:[
@@ -29,6 +30,7 @@ const routes: Routes = [
    {path:'emi',component:EmiComponent},
    {path:'simpleinterest',component:SimpleinterestComponent},
    {path:'degrees',component:DegreesComponent},
+   {path:'directives',component:DirectivesComponent},
    ]},
    
 

@@ -1,0 +1,19 @@
+body{
+    margin: 0px;
+    align-items: center;
+
+}
+
+table{
+    background-color: beige;
+    color: black;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.pink{
+    color: rgb(165, 16, 41);
+}

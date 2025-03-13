@@ -23,7 +23,7 @@ button{
     width: 80%;
     height: 100%;
     background-color: blueviolet;
-    text-align: center;
     color: white;
+    align-items: center;
     overflow: auto;
 }

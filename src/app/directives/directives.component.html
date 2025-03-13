@@ -1,0 +1,41 @@
+<div class="main">
+
+<h1>Products</h1>
+
+
+<table border="'2px">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Rating</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let parts of products">
+            <td>{{parts.name | uppercase}}</td>
+            <td [ngStyle]="{'color':parts.price<2000 ? 'green':'red'}">{{parts.price | currency}}</td>               
+            <td [ngClass]="{'green':parts.rating>4,'red':parts.rating<2,'pink':parts.rating>2&&parts.rating<4}">{{parts.rating}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ol>
+    <li *ngFor="let state of states">{{state}}</li>
+</ol>
+
+<ul>
+    <li *ngFor="let state of states">{{state}}</li>
+</ul>
+
+<select>
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<p *ngIf="isVisible">Welcome to Planet Earth </p>
+<p *ngIf="!isVisible">Our Planet Our Home </p>
+
+<h1>{{newDate | date:'yyyy-MM-dd'}}</h1>
+
+</div>

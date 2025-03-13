@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { EmiComponent } from './emi/emi.component';
 import { SimpleinterestComponent } from './simpleinterest/simpleinterest.component';
 import { DegreesComponent } from './degrees/degrees.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DegreesComponent } from './degrees/degrees.component';
     HomeinnerComponent,
     EmiComponent,
     SimpleinterestComponent,
-    DegreesComponent
+    DegreesComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
