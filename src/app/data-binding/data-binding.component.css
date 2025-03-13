@@ -1,0 +1,11 @@
+body{
+    margin: 0px;
+    justify-content: center;
+}
+.main{
+     height: 20vw;
+     width: 50vh;
+     margin-left: 400px;
+     background-color: black;
+     
+}

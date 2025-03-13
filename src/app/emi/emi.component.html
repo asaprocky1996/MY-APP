@@ -1,0 +1,20 @@
+<div class="main">
+    <h1>EMI : </h1>
+
+    <label>principle :</label>
+    <input type="number"  [(ngModel)]="principle"><br>
+
+    <label>rate :</label>
+    <input type="number"  [(ngModel)]="rate"><br>
+
+    <label>period :</label>
+    <input type="number"  [(ngModel)]="period">
+    
+
+    <button (click)="emi()">emi</button>
+
+    <h3>{{result}}</h3>
+
+
+
+</div>
