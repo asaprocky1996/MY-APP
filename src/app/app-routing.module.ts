@@ -15,6 +15,9 @@ import { EmiComponent } from './emi/emi.component';
 import { SimpleinterestComponent } from './simpleinterest/simpleinterest.component';
 import { DegreesComponent } from './degrees/degrees.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { PricesComponent } from './prices/prices.component';
+import { VechileComponent } from './vechile/vechile.component';
 
 const routes: Routes = [
    {path:'dashboard',component:DashboardComponent,children:[
@@ -31,6 +34,9 @@ const routes: Routes = [
    {path:'simpleinterest',component:SimpleinterestComponent},
    {path:'degrees',component:DegreesComponent},
    {path:'directives',component:DirectivesComponent},
+   {path:'employee',component:EmployeeComponent},
+   {path:'prices',component:PricesComponent},
+   {path:'vechile',component:VechileComponent}
    ]},
    
 

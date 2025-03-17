@@ -19,6 +19,10 @@ import { EmiComponent } from './emi/emi.component';
 import { SimpleinterestComponent } from './simpleinterest/simpleinterest.component';
 import { DegreesComponent } from './degrees/degrees.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { PricesComponent } from './prices/prices.component';
+import { VechileComponent } from './vechile/vechile.component';
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -37,12 +41,16 @@ import { DirectivesComponent } from './directives/directives.component';
     EmiComponent,
     SimpleinterestComponent,
     DegreesComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    EmployeeComponent,
+    PricesComponent,
+    VechileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,54 @@
+main{
+    margin: 0px;
+    
+
+    
+}
+.header{
+    width: 80vw;
+    height: 30vh;
+    background-color: chartreuse;
+    display: flex;
+    text-align: center;
+}
+.left{
+    width: 45vw;
+    height: 30vh;
+    background-color: darkcyan; 
+
+button{
+    background-color: greenyellow;
+    color: black;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+hr{
+    border-color: black;
+}    
+
+}
+.right{
+    width: 40vw;
+    height: 30vh;
+    background-color: darkcyan;
+
+
+}
+button{
+    background-color: green;
+    color: white;
+}
+thead{
+
+    background-color: greenyellow;
+}
+.body{
+    width: 80vw;
+    height: 70vh;
+    background-color: grey;
+}
+table{
+    background-color: beige;
+    color: black;
+    width: 80vw;
+}
