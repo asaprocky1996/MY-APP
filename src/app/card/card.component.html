@@ -1,0 +1,79 @@
+<div class="main">
+    <div class="header">
+
+        <input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="enter here to search">
+
+        
+     <select [(ngModel)]="column">
+        <option>name</option>
+        <option>phone</option>
+        <option>city</option>
+        <option>dob</option>
+        <option>id</option>
+      </select>
+
+   <select [(ngModel)]="order">
+        <option>asc</option>
+        <option>decs</option>
+   </select>
+
+   <button (click)="sort()">sort</button>
+
+   <select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+   </select>
+
+   <select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+
+   </select>
+
+   
+   <button (click)="pagination()">Pagination</button>
+
+   <button routerLink="/dashboard/create-card">create card</button>
+
+
+
+    </div>
+    <div class="footer">
+        <div class="card" *ngFor="let student of card" >
+            <div class="cardtop">
+            <img [src]="student.school_logo" alt="" width="20%" height="100%"> 
+            <h5>{{student.school_name}}</h5><br>
+            
+            
+            
+
+            </div>
+            <div class="cardmid">
+                 <div class="cardmidleft">
+                    <h6><div class="name">Name      :<b>{{student.name}}</b></div>
+                        <div class="name">Phone No  :<b>{{student.phone}}</b></div>
+                        <div class="name">City      :<b>{{student.city}}</b></div>
+                        <div class="name">DOB       :<b>{{student.dob}}</b></div> 
+                         <div class="name">Email :<b>{{student.email}}</b></div>
+                         <div class="name">city:<b>{{student.school_city}}</b></div>
+                         <div class="name">pin:<b>{{student.school_pin}}</b></div>
+                         <div class="name">id:<b>{{student.id}}</b></div></h6>
+                 </div>
+                 <div class="cardmidrigth">
+                    <img [src]="student.profile_picture" alt="" width="150px" height="150px">
+
+                 </div>
+            </div>
+
+            <div class="cardbottom">
+                <button class="b1">view</button>
+                <button class="b2">Edit</button>
+                <button (click)="delete(student.id)"
+                class="b3">Delete</button>
+            </div>
+        </div>
+
+    </div>
+</div>

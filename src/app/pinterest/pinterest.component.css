@@ -1,0 +1,61 @@
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-evenly;
+    background-color: rgb(236, 226, 213);
+    gap: 10px;
+}
+.box{
+    
+    width: 30%;
+    height: 50%;
+    margin-bottom: 5px;
+
+    
+
+
+}
+.image{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    
+    
+}
+.image:hover .name{
+    display: inline-block;
+    width: 50%;
+    height: 10%;
+    background-color: black;
+    text-align: center;
+    color: white;
+    position: absolute;
+    right: 95px;
+    bottom: 227px;
+}
+.image:hover .btn{
+    display: inline-block;
+    width: 70%;
+    position: absolute;
+    left: 140px;
+    top: 210px;
+    
+}
+.name{
+    width: 90%;
+    height: 5%;
+    color: white;
+    display: none;
+}
+.btn{
+    width: 5%;
+    height: 5%;
+    display: none;
+}
+button{
+    background-color: chartreuse;
+    color: black;
+}

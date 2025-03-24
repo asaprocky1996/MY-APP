@@ -1,0 +1,7 @@
+<div class="task">
+    <ul>
+        <li *ngFor="let list of Mail" [style.color]="list.completed ? 'grey' : 'black' ">
+            {{list.id}} . {{list.title}} 
+        </li>
+    </ul>
+</div>

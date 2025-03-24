@@ -18,12 +18,21 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { PricesComponent } from './prices/prices.component';
 import { VechileComponent } from './vechile/vechile.component';
+import { AccountsComponent } from './accounts/accounts.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { CardComponent } from './card/card.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateCardComponent } from './create-card/create-card.component';
+import { ReportComponent } from './report/report.component';
 
 const routes: Routes = [
    {path:'dashboard',component:DashboardComponent,children:[
-   {path:'home',component:HomeComponent,children:[
-    {path:'homeinner',component:HomeinnerComponent}
-   ]},
+   {path:'home',component:HomeComponent},
    {path: 'welcome', component:WelcomeComponent},
    {path: 'data-binding',component:DataBindingComponent},
    {path:'calculator',component:CalculatorComponent},
@@ -36,7 +45,19 @@ const routes: Routes = [
    {path:'directives',component:DirectivesComponent},
    {path:'employee',component:EmployeeComponent},
    {path:'prices',component:PricesComponent},
-   {path:'vechile',component:VechileComponent}
+   {path:'vechile',component:VechileComponent},
+   {path:'accounts',component:AccountsComponent},
+   {path: 'flipkart',component:FlipkartComponent},
+   {path:'mail',component:MailComponent},
+   {path: 'pinterest',component:PinterestComponent},
+   {path:'weather',component:WeatherComponent},
+   {path:'create-vehicle',component:CreateVehicleComponent},
+   {path:'create-accounts',component:CreateAccountsComponent},
+   {path:'card',component:CardComponent},
+   {path:'create-card',component:CreateCardComponent},
+   {path:'create-user',component:CreateUserComponent},
+   {path:'report',component:ReportComponent}
+  
    ]},
    
 

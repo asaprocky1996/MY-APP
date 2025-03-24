@@ -1,0 +1,50 @@
+<h1>Accounts</h1>
+
+
+<input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="enter here to search">
+
+<select [(ngModel)]="column">
+    <option>account_number</option>
+    <option>available_balance</option>
+    <option>city</option>
+    <option>id</option>
+    <option>ifsc_code</option>
+</select>            
+
+   <select [(ngModel)]="order">
+    <option>asc</option>
+    <option>decs</option>
+   </select>
+
+   
+   
+   <button (click)="pagination()">Pagination</button>
+
+
+
+<table class=" table table-dark">
+    <thead>
+        <tr>
+            <th>S No</th>
+            <th>account_number</th>
+            <th>available_balance</th>
+            <th>city</th>
+            <th>id</th>
+            <th>ifsc_code</th>
+            <th>profie_picture</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let profile of accounts; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{profile.account_number}}</td>
+            <td>{{profile.available_balance}}</td>
+            <td>{{profile.city}}</td>
+            <td>{{profile.id}}</td>
+            <td>{{profile.ifsc_code}}</td>
+            <td><img src={{profile.profie_picture}} alt="{{profile.profie_picture}} "  width="200px" height="150px"></td>
+
+        </tr> 
+    </tbody>
+</table>

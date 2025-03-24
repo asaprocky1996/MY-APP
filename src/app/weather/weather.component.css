@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    color: black;
+}
+
+.weather-card {
+    text-align: center;
+    background: white;
+    color: black;
+    margin-left: 350px;
+    margin-top: 100px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.dot {
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    border-radius: 50%;
+    margin-left: 130px;
+}
+
+.temperature {
+    font-size: 32px;
+    font-weight: bold;
+    color: orange;
+}
+
+.day {
+    font-size: 16px;
+    color: blue;
+}

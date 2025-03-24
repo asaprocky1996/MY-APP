@@ -1,0 +1,58 @@
+main{
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.body{
+      
+    width: 100vw;
+    overflow: auto;
+    background-color: cadetblue;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+}
+.cards{
+    width: 20%;
+    height: 90%;
+    background-color: white;
+    color: black;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+.d0{
+    width: 100%;
+    height: 30%;
+}
+.d1{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(249, 250, 250);
+}
+.d2{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(251, 253, 249);
+    font-size: 50%;
+}
+ .d3{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(253, 251, 250);
+ }
+.d4{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(246, 248, 248);
+}
+.d5{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(247, 247, 250);
+    margin-top: 2px;
+}
+
