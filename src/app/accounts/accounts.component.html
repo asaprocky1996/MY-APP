@@ -32,6 +32,10 @@
             <th>id</th>
             <th>ifsc_code</th>
             <th>profie_picture</th>
+            <th>View</th>
+            <th>Edit </th>
+            <th>Action</th>
+
         </tr>
     </thead>
 
@@ -44,6 +48,28 @@
             <td>{{profile.id}}</td>
             <td>{{profile.ifsc_code}}</td>
             <td><img src={{profile.profie_picture}} alt="{{profile.profie_picture}} "  width="200px" height="150px"></td>
+
+
+            <td><button routerLink="/dashboard/account-details/{{profile.id}}"
+                class="btn btn-primary">View</button>
+            </td> 
+    
+    
+             <td><button routerLink="/dashboard/edit-accounts/{{profile.id}}"
+                 class="btn btn-warning">Edit </button>
+            </td> 
+            
+    
+    
+                <td>
+                    <button (click)="delete(profile.id)"
+                    class="btn btn-danger">Delete</button>
+                </td>
+    
+
+
+
+
 
         </tr> 
     </tbody>

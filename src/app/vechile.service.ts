@@ -11,7 +11,19 @@ export class VechileService {
   //Here, it is used to inject the HttpClient service into the class.//
 
 
+  
   constructor(private _httpClient:HttpClient) { }
+
+  //-----------------------------------BASE URL----------------------------------------//
+
+  //Code Optimization:
+//replace the complete url with quotes: store it in a variable (e.g. baseUrl) and replace the url throughout the code.//
+
+//baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction";
+
+//getSortedVehicles(column:any,order:any):Observable<any>{
+ // return this._httpClient.get(this.baseUrl+column+"&order"+order);}
+ 
 
   //HttpClient is an Angular service used to make HTTP requests (e.g., GET, POST, DELETE).//
   
@@ -65,4 +77,13 @@ export class VechileService {
   createVehicle(data:any):Observable<any>{
     return this._httpClient.post('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction',data)
   }
+
+  getVehilce(id:any):Observable<any>{
+    return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/'+id);
+  }
+
+  updateVehicle(id:any,data:any):Observable<any>{
+    return this._httpClient.put('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/'+id,data);
+  }
+
 }

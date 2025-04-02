@@ -15,6 +15,7 @@ main{
     width: 45vw;
     height: 30vh;
     background-color: darkcyan; 
+}    
 
 button{
     background-color: greenyellow;
@@ -26,7 +27,7 @@ hr{
     border-color: black;
 }    
 
-}
+
 .right{
     width: 40vw;
     height: 30vh;

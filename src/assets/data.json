@@ -1,0 +1,58 @@
+[
+    {
+      "account_name": "Credit Card Account",
+      "available_balance": "601.59",
+      "account_number": 9400,
+      "city": "Napa",
+      "profie_picture": "https://loremflickr.com/640/480/people",
+      "ifsc_code": "798628367",
+      "id": "72"
+    },
+    {
+      "account_name": "Checking Account",
+      "available_balance": "966.97",
+      "account_number": 5509,
+      "city": "St. Peters",
+      "profie_picture": "https://loremflickr.com/640/480/people",
+      "ifsc_code": "473921046",
+      "id": "76"
+    },
+    {
+      "account_name": "Home Loan Account",
+      "available_balance": "371.09",
+      "account_number": 53254,
+      "city": "Vallejo",
+      "profie_picture": "https://loremflickr.com/640/480/people",
+      "ifsc_code": "462635990",
+      "id": "77"
+    },
+    {
+      "account_name": "Investment Account",
+      "available_balance": "902.51",
+      "account_number": 59120,
+      "city": "Flagstaff",
+      "profie_picture": "https://loremflickr.com/640/480/people",
+      "ifsc_code": "106797291",
+      "id": "78"
+    },
+    {
+      "account_name": "Savings Account",
+      "available_balance": "405.66",
+      "account_number": 1615,
+      "city": "Haverhill",
+      "profie_picture": "https://loremflickr.com/640/480/people",
+      "ifsc_code": "722381777",
+      "id": "79"
+    },
+    {
+      "account_name": "Checking Account",
+      "available_balance": "519.16",
+      "account_number": 56807,
+      "city": "Nashville-Davidson",
+      "profie_picture": "https://loremflickr.com/640/480/people",
+      "ifsc_code": "169202192",
+      "id": "80"
+    }
+
+]   
+  

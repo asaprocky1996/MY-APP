@@ -22,7 +22,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { PricesComponent } from './prices/prices.component';
 import { VechileComponent } from './vechile/vechile.component';
-import { HttpClientModule} from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
@@ -34,6 +34,20 @@ import { CardComponent } from './card/card.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateCardComponent } from './create-card/create-card.component';
 import { ReportComponent } from './report/report.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { TextAreaComponent } from './text-area/text-area.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 
 
@@ -69,6 +83,18 @@ import { ReportComponent } from './report/report.component';
     CreateUserComponent,
     CreateCardComponent,
     ReportComponent,
+    VehicleDetailsComponent,
+    CardDetailsComponent,
+    AccountDetailsComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    TextAreaComponent,
+    CapitalDirective,
+    BalancePipe,
+    LifeCycleHooksComponent,
     
   
   ],
@@ -78,8 +104,15 @@ import { ReportComponent } from './report/report.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutUsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

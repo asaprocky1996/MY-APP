@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { VechileService } from '../vechile.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-vehicle',
@@ -20,9 +20,48 @@ export class CreateVehicleComponent {
 
   })
 
-  constructor(private _vehicleService:VechileService,private _router:Router){}
+  id:number=0;
+  constructor(private _vehicleService:VechileService,
+    private _router:Router,
+    private _activateRoute:ActivatedRoute){
+      _activateRoute.params.subscribe(
+        (data:any)=>{
+          console.log(data.id);
+          this.id=data.id;
+        },(err:any)=>{
+          alert('Internal Server Error')
+        }
+      )
+
+      if(this.id){
+        _vehicleService.getVehilce(this.id).subscribe(
+          (data:any)=>{
+            console.log(data);
+            this.vehicleForm.patchValue(data);
+          },(err:any)=>{
+            alert('Internal server error')
+          }
+        )
+      }
+    }
   create(){
-    console.log(this.vehicleForm.value);
+
+    if(this.id){
+
+      console.log(this.vehicleForm.value);
+      this._vehicleService.updateVehicle(this.id,this.vehicleForm.value).subscribe(
+        (data:any)=>{
+          console.log(data);
+          alert('Vehicle Record Updated Successfully!');
+          this._router.navigateByUrl("/dashboard/vechile");
+        },(err:any)=>{
+          alert('Internal server error')
+        }
+      )
+
+    }else{
+
+      console.log(this.vehicleForm.value);
     this._vehicleService.createVehicle(this.vehicleForm.value).subscribe(
       (data:any)=>{
         console.log(data);
@@ -32,6 +71,13 @@ export class CreateVehicleComponent {
         alert("Internal server Error")
       }
     )
+
+    }
+    
+
+
+    
+
 
   }
 

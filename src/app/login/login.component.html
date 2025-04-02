@@ -1,2 +1,17 @@
-<p>login works! rakesh</p>
-<button routerLink="/dashboard">Redirect</button>
+
+
+<div class="main">
+
+    <div class="login">
+        <form [formGroup]="loginForm">
+            <label>Email : </label>
+            <input type="email" formControlName="email"> <br><br>
+            <label>Password : </label>
+            <input type="password" formControlName="password"><br><br>
+            <button class="btn btn-primary" (click)="login()">Login</button><br><br>
+
+            <button class='b1'routerLink="/dashboard">Click here to redirect to Dashboard</button>
+
+        </form>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { Error404Component } from './error404/error404.component';
@@ -29,9 +29,18 @@ import { CardComponent } from './card/card.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateCardComponent } from './create-card/create-card.component';
 import { ReportComponent } from './report/report.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { AccountDetailsComponent } from './account-details/account-details.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
+import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
+import { LifeCycleHooksComponent } from './life-cycle-hooks/life-cycle-hooks.component';
 
 const routes: Routes = [
-   {path:'dashboard',component:DashboardComponent,children:[
+   {path:'login',component:LoginComponent},
+   {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
    {path:'home',component:HomeComponent},
    {path: 'welcome', component:WelcomeComponent},
    {path: 'data-binding',component:DataBindingComponent},
@@ -54,9 +63,25 @@ const routes: Routes = [
    {path:'create-vehicle',component:CreateVehicleComponent},
    {path:'create-accounts',component:CreateAccountsComponent},
    {path:'card',component:CardComponent},
-   {path:'create-card',component:CreateCardComponent},
+   {path:'create-card',component:CreateCardComponent}, 
    {path:'create-user',component:CreateUserComponent},
-   {path:'report',component:ReportComponent}
+   {path:'report',component:ReportComponent},
+   {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+   {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+   {path:'card-details/:id',component:CardDetailsComponent},
+   {path:'edit-card/:id',component:CreateCardComponent},
+   {path:'account-details/:id',component:AccountDetailsComponent},
+   {path:'edit-accounts/:id',component:CreateAccountsComponent},
+   {path:'sibling1',component:Sibling1Component},
+   {path:'parent',component:ParentComponent},
+   {path:'about-ceo',component:AboutCeoComponent},
+   {path:'about-company',component:AboutCeoComponent},
+   {path:'payments',
+    loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+   },
+
+   {path:'life-cycle-hooks',component:LifeCycleHooksComponent},
+
   
    ]},
    
@@ -64,7 +89,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

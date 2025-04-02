@@ -13,8 +13,15 @@ export class AccountsService {
 
   constructor(private _httpClient:HttpClient) { }
 
+  baseUrl:string='/assets/data.json';
+
   getaccounts():Observable<any>{
-    return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/principals')
+    //return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/principals');
+    return this._httpClient.get(this.baseUrl);
+  }
+
+  createAccounts(data:any):Observable<any>{
+    return this._httpClient.post('https://6128991386a213001729f9df.mockapi.io/test/v1/principals',data);
   }
 
   //FILTER//
@@ -35,4 +42,12 @@ export class AccountsService {
     return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/principals?limit='+limit+"&page="+page);
   }
 
+
+  getAccounts(id:any):Observable<any>{
+    return this._httpClient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/principals/'+id);
+  }
+
+  updateAccounts(id:any,data:any):Observable<any>{
+    return this._httpClient.put('https://6128991386a213001729f9df.mockapi.io/test/v1/principals/'+id,data);
+  }
 }

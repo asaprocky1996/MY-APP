@@ -1,1 +1,23 @@
-<p>create-accounts works!</p>
+<h1 *ngIf="!id">Create Account</h1>
+<h1 *ngIf="id">Update Account</h1>
+
+
+
+
+
+
+<form [formGroup]="accountForm">
+   <label>Account No : </label>
+   <input type="text" formControlName="account_number"><br>
+   <label>Availabel Balance : </label>
+   <input type="text" formControlName="available_balance"><br>
+   <label>City : </label>
+   <input type="number" formControlName="city"><br>
+   <label>Ifsc code : </label>
+   <input type="text" formControlName="ifsc_code"> <br>
+
+    <button (click)="create()" class="btn btn-info">{{id?'Update Account':'Create Account'}}</button>
+
+
+
+</form>

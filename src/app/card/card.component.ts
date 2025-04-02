@@ -14,7 +14,7 @@ export class CardComponent {
 
  constructor(private _cardService:CardService){
 
-   _cardService.getcard().subscribe(
+   _cardService.getCard(this.card).subscribe(
     (data:any)=>{
       console.log(data);
       this.card=data;
@@ -50,7 +50,7 @@ export class CardComponent {
  }
 
  loadcard(){
-  this._cardService.getcard().subscribe(
+  this._cardService.getCard(this.card).subscribe(
     (data:any)=>{
       console.log(data);
       this.card=data;
@@ -62,12 +62,12 @@ export class CardComponent {
 
  delete(id:any){
   if(confirm('Are you sure u want to delete')==true){
-    this._cardService.deletcard(id).subscribe(
+    this._cardService.deletecard(id).subscribe(
       (data:any)=>{
         alert('Record deleted succeessfully');
         this.loadcard();
       },(err:any)=>{
-        alert('server error')
+        alert()
       }
     )
   }else{

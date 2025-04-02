@@ -2,7 +2,8 @@
     <div class="body">
         <div class="cards"  *ngFor =" let product of flipkart ">
             <div class="d0">
-            <img [src]="product.image" alt="product.image" width="200px" height="180px">
+            <img [src]="product.image" alt="" width="200px" height="180px">
+            <div class="rating"><app-rating [rating]="(product.rating?.rate)"></app-rating></div>
             </div>
             <div class="d1">{{product.category}}</div>
             <div class="d2">{{product.description | slice:0:120}}</div>

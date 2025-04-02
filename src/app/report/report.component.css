@@ -13,6 +13,7 @@
     height: 95%;
     line-height: 1.5;
     background-color: rgb(28,56,67);
+    overflow: auto;
     color: white;
      
 

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { VechileService } from '../vechile.service';
+import { BalancePipe } from "../balance.pipe";
 
 @Component({
   selector: 'app-vechile',
   templateUrl: './vechile.component.html',
-  styleUrls: ['./vechile.component.css']
+  styleUrls: ['./vechile.component.css'],
 })
 export class VechileComponent {
        
