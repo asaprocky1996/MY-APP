@@ -31,6 +31,7 @@ import { CreateCardComponent } from './create-card/create-card.component';
 import { ReportComponent } from './report/report.component';
 
 const routes: Routes = [
+   {path:'login',component:LoginComponent}, 
    {path:'dashboard',component:DashboardComponent,children:[
    {path:'home',component:HomeComponent},
    {path: 'welcome', component:WelcomeComponent},
